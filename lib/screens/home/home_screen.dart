@@ -1,4 +1,5 @@
 import 'package:carrot_market_ui/models/product.dart';
+import 'package:carrot_market_ui/screens/components/appbar_preferredSize.dart';
 import 'package:carrot_market_ui/screens/components/product_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -23,10 +24,7 @@ class HomeScreen extends StatelessWidget {
             IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.bell)),
 
           ],
-          bottom: PreferredSize(
-            preferredSize: Size.fromHeight(0.5),
-            child: Divider(thickness: 0.5, height: 0.5,),
-          ),
+          bottom: appBarBottomLine(),
         ),
         body: ListView.separated(
           itemBuilder: (context, index) {
